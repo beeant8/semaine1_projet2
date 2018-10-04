@@ -13,10 +13,6 @@ puts hash.min_by {|name,amount| amount}
 puts name.grep(/coin/i).count
 
 # Sors moi tout les devises, dont le cours est inférieur à 6000 (indice: pense bien à enlever le $ pour pouvoir faire une comparaison)
-hash.each do |name, amount|
-	if amount.to_i < 6000
-		puts name
-	end
-end
+puts hash.map {|amount,name| amount if name.sub('$', '').to_f < 6000}
 
 # Quel est le cours le plus haut parmi celle-la ?
