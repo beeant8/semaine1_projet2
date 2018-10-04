@@ -5,11 +5,10 @@ hash = Hash[name.zip(amount)]
 puts hash
 
 # Donne moi la crypto qui a la plus grosse valeur
-puts hash.max_by {|name,amount| amount}
+puts hash.max_by {|name,amount| amount =(-"$")}
 
 # Donne moi la crypto qui a la plus petite valeur
 puts hash.min_by {|name,amount| amount}
-
 
 # Combien de crypto contiennent le mot "coin" ? 
 puts name.grep(/coin/i).count
