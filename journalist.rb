@@ -20,4 +20,4 @@ puts arr.grep(/[A-Z]/).count
 puts arr.grep(/_/).count
 
 # Trie la liste de handle par ordre alphabétique
-puts arr.sort
+puts arr.sort_by! {|x| x.downcase}
